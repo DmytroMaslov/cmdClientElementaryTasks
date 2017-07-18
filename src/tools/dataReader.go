@@ -24,3 +24,12 @@ func ReadFromFile(fileName string) ([]byte, error){
 	}
 	return bs, nil
 }
+
+func IsPresent(file string) (bool){
+	ok, err := os.Open(file)
+	if err !=nil{
+		return false
+	}
+	defer ok.Close()
+	return true
+}

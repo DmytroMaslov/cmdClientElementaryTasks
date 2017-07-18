@@ -15,9 +15,11 @@ type Respons struct {
 	Resp string `json:"resp"`
 	Reason string `json:"reason"`
 }
+
+
 func RunTask (task string, file string) (map[string][]string, error){
 
-	data, er := ReadFromFile(file)
+	data, er := GetTaskFromFile(task, file)
 	if er != nil{
 		return nil, er
 	}
@@ -41,7 +43,7 @@ func RunTask (task string, file string) (map[string][]string, error){
 }
 
 func RunAllTasks(file string) (map[string][]string, error) {
-	data, err := ReadFromFile(file)
+	data, err := GetAllTaskFromFile(file)
 	if err != nil{
 		return nil, err
 	}
