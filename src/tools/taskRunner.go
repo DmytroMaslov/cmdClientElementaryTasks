@@ -7,11 +7,11 @@ import (
 
 const URL string = "http://localhost:8080"
 const ALL_TASK string = "/tasks"
-const ONE_TASK string = "/task"
+const ONE_TASK string = "/Task"
 const SEPARATOR  = "/"
 
 type Respons struct {
-	Task string `json: task`
+	Task string `json: Task`
 	Resp string `json:"resp"`
 	Reason string `json:"reason"`
 }

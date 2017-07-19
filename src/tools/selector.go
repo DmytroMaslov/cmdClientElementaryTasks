@@ -18,7 +18,7 @@ func GetTaskFromFile(task string, fileName string) (data []byte, err error){
 	}
 	data, ok := allTask[task]
 	if !ok {
-		return nil, errors.New("Can't find task in file")
+		return nil, errors.New("Can't find Task in file")
 	}
 	return data, nil
 }
